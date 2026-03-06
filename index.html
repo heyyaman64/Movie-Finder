@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🎬 Movie Finder</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for a movie...">
+                <button id="searchBtn">Search</button>
+            </div>
+        </header>
+
+        <!-- Results Section -->
+        <div id="resultsContainer" class="results-grid">
+            <!-- Movie cards will be injected here by JS -->
+        </div>
+
+        <!-- Favorites Section -->
+        <div class="favorites-section">
+            <h2>⭐ My Favorites</h2>
+            <div id="favoritesContainer" class="favorites-grid">
+                <!-- Favorite movies will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
