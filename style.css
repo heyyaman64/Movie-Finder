@@ -9,6 +9,7 @@ body {
     background-color: #1a1a2e;
     color: #fff;
     padding: 20px;
+    min-height: 100vh;
 }
 
 .container {
@@ -16,6 +17,7 @@ body {
     margin: 0 auto;
 }
 
+/* Header Section */
 header {
     text-align: center;
     margin-bottom: 40px;
@@ -24,12 +26,14 @@ header {
 h1 {
     margin-bottom: 20px;
     color: #e94560;
+    font-size: 2.5rem;
 }
 
 .search-box {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 input {
@@ -129,6 +133,21 @@ button:hover {
     border: 1px solid #e94560;
 }
 
+/* Where to Watch Section */
+.where-to-watch {
+    background-color: #0f3460;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.where-to-watch span {
+    color: #ffd700;
+    font-weight: bold;
+}
+
 /* Favorites Section Specifics */
 .favorites-section {
     border-top: 2px solid #333;
@@ -140,4 +159,122 @@ button:hover {
     text-align: center;
     color: #888;
     font-style: italic;
+}
+
+/* ============================================
+   RESPONSIVE MEDIA QUERIES
+   ============================================ */
+
+/* Tablet (768px and below) */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-card img {
+        height: 300px;
+    }
+
+    .card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-meta {
+        font-size: 0.85rem;
+    }
+
+    .plot {
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    input, button {
+        width: 100%;
+    }
+
+    .results-grid, .favorites-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .movie-card img {
+        height: 250px;
+    }
+
+    .card-content {
+        padding: 12px;
+    }
+
+    .card-content h3 {
+        font-size: 1rem;
+    }
+
+    .card-meta {
+        font-size: 0.8rem;
+    }
+
+    .plot {
+        font-size: 0.75rem;
+    }
+
+    .where-to-watch {
+        font-size: 0.75rem;
+    }
+
+    .add-fav-btn {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile (320px and below) */
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .movie-card img {
+        height: 200px;
+    }
+
+    .card-content h3 {
+        font-size: 0.9rem;
+    }
+
+    .card-meta {
+        font-size: 0.75rem;
+    }
+
+    .plot {
+        font-size: 0.7rem;
+    }
 }
